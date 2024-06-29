@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensure padding and border are included in width/height */
+}
+
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh; /* Center content vertically */
+    background-color: #9ffab1; /* Light gray background */
+}
+
+h1, h2 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px; /* Gap between columns */
+    border: 2px solid black;
+    width: 650px;
+    background-color: rgb(39, 25, 236);
+    padding: 10px; /* Padding inside the board */
+}
+
+ul {
+    display: grid;
+    place-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+ul p {
+    margin: 5px;
+    width: 75px;
+    height: 75px;
+    border: 2px solid black;
+    border-radius: 10px; /* Rounded corners */
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul:hover {
+    cursor: pointer;
+    background-color: rgb(46, 180, 237); /* Lighter blue on hover */
+}
+
+@media (max-width: 700px) {
+    .board {
+        width: 500px;
+    }
+    ul p {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+@media (max-width: 520px) {
+    .board {
+        width: 400px;
+    }
+    ul p {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 420px) {
+    .board {
+        width: 320px;
+    }
+    ul p {
+        width: 30px;
+        height: 30px;
+    }
+}
